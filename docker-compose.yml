@@ -1,33 +1,33 @@
-version: '3.8'
+version: "3.8"
 
 services:
-  mongodb:
-    image: mongo:latest
-    container_name: boilerplate-mongodb
-    restart: always
-    ports:
-      - "27017:27017"
-    volumes:
-      - mongodb_data:/data/db
-    networks:
-      - app-network
+    mongodb:
+        image: mongo:latest
+        container_name: boilerplate-mongodb
+        restart: always
+        ports:
+            - "27017:27017"
+        volumes:
+            - mongodb_data:/data/db
+        networks:
+            - app-network
 
-  mongo-express:
-    image: mongo-express:latest
-    container_name: boilerplate-mongo-express
-    restart: always
-    ports:
-      - "8081:8081"
-    environment:
-      ME_CONFIG_MONGODB_SERVER: mongodb
-    depends_on:
-      - mongodb
-    networks:
-      - app-network
+    mongo-express:
+        image: mongo-express:latest
+        container_name: boilerplate-mongo-express
+        restart: always
+        ports:
+            - "8081:8081"
+        environment:
+            ME_CONFIG_MONGODB_SERVER: mongodb
+        depends_on:
+            - mongodb
+        networks:
+            - app-network
 
 volumes:
-  mongodb_data:
+    mongodb_data:
 
 networks:
-  app-network:
-    driver: bridge 
+    app-network:
+        driver: bridge

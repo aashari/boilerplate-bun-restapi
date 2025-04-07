@@ -1,16 +1,25 @@
 {
-  "name": "boilerplate-rest-api-bun",
-  "version": "2.0.0",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
-  },
-  "dependencies": {
-    "elysia": "^1.2.25",
-    "mongoose": "^8.13.2"
-  },
-  "devDependencies": {
-    "bun-types": "^1.2.8"
-  },
-  "module": "src/index.js"
+	"name": "boilerplate-rest-api-bun",
+	"version": "2.0.0",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "bun run --watch src/index.ts",
+		"lint": "eslint .",
+		"format": "prettier --write ."
+	},
+	"dependencies": {
+		"elysia": "^1.2.25",
+		"mongoose": "^8.13.2"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^8.29.0",
+		"@typescript-eslint/parser": "^8.29.0",
+		"bun-types": "^1.2.8",
+		"eslint": "^9.24.0",
+		"eslint-config-prettier": "^10.1.1",
+		"eslint-plugin-prettier": "^5.2.6",
+		"prettier": "^3.5.3",
+		"typescript-eslint": "^8.29.0"
+	},
+	"module": "src/index.js"
 }

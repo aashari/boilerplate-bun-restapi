@@ -32,9 +32,9 @@ Suitable for both learning purposes and as a foundation for production applicati
 Before you begin, ensure you have the following installed:
 
 - [Bun](https://bun.sh/) runtime (v1.0.0 or newer)
-  - Installation: `curl -fsSL https://bun.sh/install | bash`
+    - Installation: `curl -fsSL https://bun.sh/install | bash`
 - [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/) (for MongoDB)
-  - Follow the official Docker installation guide for your operating system
+    - Follow the official Docker installation guide for your operating system
 - [curl](https://curl.se/) or [Postman](https://www.postman.com/) for testing API endpoints (optional)
 
 ## Quick Start
@@ -170,31 +170,31 @@ This project includes a helper script (`api.sh`) to make it easier to manage the
 
 1. **Entry Point (`src/index.ts`)**
 
-   - Sets up the Elysia server
-   - Registers middleware for logging and error handling
-   - Registers routes for authors and posts
-   - Connects to MongoDB
+    - Sets up the Elysia server
+    - Registers middleware for logging and error handling
+    - Registers routes for authors and posts
+    - Connects to MongoDB
 
 2. **MongoDB Connection (`src/_mongo/index.ts`)**
 
-   - Establishes a connection to MongoDB
-   - Configures connection options based on environment variables
+    - Establishes a connection to MongoDB
+    - Configures connection options based on environment variables
 
 3. **Models (`src/_mongo/model.author.ts` and `src/_mongo/model.post.ts`)**
 
-   - Define the schema for authors and posts
-   - Create indexes for optimized queries
-   - Establish relationships between models
+    - Define the schema for authors and posts
+    - Create indexes for optimized queries
+    - Establish relationships between models
 
 4. **Routes and Controllers**
 
-   - Each resource (authors, posts) has its own module with routes and service functions
-   - Routes define the API endpoints
-   - Service functions implement the business logic
+    - Each resource (authors, posts) has its own module with routes and service functions
+    - Routes define the API endpoints
+    - Service functions implement the business logic
 
 5. **Data Transfer Objects (DTOs)**
-   - Handle data transformations between the API and the database
-   - Ensure data consistency and validation
+    - Handle data transformations between the API and the database
+    - Ensure data consistency and validation
 
 ## Development
 

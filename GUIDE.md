@@ -135,13 +135,13 @@ Expected response:
 
 ```json
 {
-  "status": 200,
-  "result": {
-    "username": "johndoe",
-    "created_at": "2025-03-01T03:08:39.568Z",
-    "_id": "67c27a6efbe6324cba9634a7",
-    "__v": 0
-  }
+	"status": 200,
+	"result": {
+		"username": "johndoe",
+		"created_at": "2025-03-01T03:08:39.568Z",
+		"_id": "67c27a6efbe6324cba9634a7",
+		"__v": 0
+	}
 }
 ```
 
@@ -268,20 +268,20 @@ If you encounter authentication errors or connection refusals:
 
 1. Verify MongoDB container status:
 
-   ```sh
-   docker ps
-   ```
+    ```sh
+    docker ps
+    ```
 
 2. Check your `.env` file MongoDB URI:
 
-   ```
-   MONGODB_URI=mongodb://localhost:27017
-   ```
+    ```
+    MONGODB_URI=mongodb://localhost:27017
+    ```
 
 3. Restart the MongoDB container:
-   ```sh
-   docker-compose restart mongodb
-   ```
+    ```sh
+    docker-compose restart mongodb
+    ```
 
 ### API Startup Issues
 
@@ -289,20 +289,20 @@ If the API fails to start:
 
 1. Check the logs:
 
-   ```sh
-   tail -f app.log
-   ```
+    ```sh
+    tail -f app.log
+    ```
 
 2. Verify all dependencies are installed:
 
-   ```sh
-   bun install
-   ```
+    ```sh
+    bun install
+    ```
 
 3. Ensure the port is available:
-   ```sh
-   lsof -i :3000
-   ```
+    ```sh
+    lsof -i :3000
+    ```
 
 ### curl Command Issues
 
@@ -310,9 +310,9 @@ If curl commands are not working:
 
 1. Verify the API is running:
 
-   ```sh
-   curl http://localhost:3000/
-   ```
+    ```sh
+    curl http://localhost:3000/
+    ```
 
 2. Check for syntax errors in your commands, especially in IDs and JSON formatting.
 
@@ -324,26 +324,26 @@ After successfully setting up and testing the REST API, consider these next step
 
 1. **Extend the API**:
 
-   - Add additional endpoints or models
-   - Implement authentication and authorization
-   - Add data validation
+    - Add additional endpoints or models
+    - Implement authentication and authorization
+    - Add data validation
 
 2. **Improve Performance**:
 
-   - Implement caching
-   - Optimize database queries
-   - Add pagination for list endpoints
+    - Implement caching
+    - Optimize database queries
+    - Add pagination for list endpoints
 
 3. **Deploy to Production**:
 
-   - Set up CI/CD pipelines
-   - Configure production environment variables
-   - Implement monitoring and logging
+    - Set up CI/CD pipelines
+    - Configure production environment variables
+    - Implement monitoring and logging
 
 4. **Add Frontend**:
-   - Create a frontend application that consumes the API
-   - Implement real-time updates with WebSockets
-   - Build a comprehensive admin dashboard
+    - Create a frontend application that consumes the API
+    - Implement real-time updates with WebSockets
+    - Build a comprehensive admin dashboard
 
 For additional resources and information about the technologies used, refer to:
 
