@@ -68,6 +68,8 @@ Note: Mongo Express is a web-based MongoDB admin interface that lets you view an
 
 ### Step 4: Install dependencies
 
+Install the project dependencies using Bun. This will also generate a `bun.lock` file (instead of the older `bun.lockb`) to ensure consistent installs across environments. Dependencies are kept up-to-date.
+
 ```sh
 bun install
 ```
